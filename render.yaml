@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: email-list
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: false      # muốn tự bấm Deploy thì để false; muốn tự động thì để true
+    ports:
+      - 8080
+    healthCheckPath: /
