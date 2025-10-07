@@ -11,8 +11,8 @@ public class MailUtilGmail {
                                 String subject, String body, boolean bodyIsHTML)
             throws MessagingException {
 
-        final String username = EmailUtil.getUser();       // Gmail address
-        final String password = EmailUtil.getPassword();   // App password nếu Gmail bật 2FA
+        final String username = System.getenv("user");       // Gmail address
+        final String password = System.getenv("password");   // App password nếu Gmail bật 2FA
 
         // 1 - get a mail session with authentication
         Properties props = new Properties();
